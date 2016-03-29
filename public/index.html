@@ -8,7 +8,7 @@
 		<script src="agent.js"></script>
 		<link rel="stylesheet" href="vendors/bootstrap.min.css">
 		<link rel="stylesheet" href="style.css">
-		<title>Sistemas Multiagentes</title>
+		<title>MultiAgent Systems</title>
 	</header>
 	<body ng-app="sma">
 		<div class="container" ng-controller="smaCtrl">
@@ -21,7 +21,7 @@
 			<div class="form-group form-inline" >
 				<label>Choose the environment type:</label>
 				<select type="text" class="form-control" ng-options="type for type in boardTypes" ng-model="selectedBoard"></select>
-				<button class="btn btn-primary" ng-click="initialize()" ng-disabled="initialized" style="position:absolute;right:150px">Iniciar</button>
+				<button class="btn btn-primary" ng-click="initialize()" ng-disabled="initialized" style="position:absolute;right:150px">Start</button>
 			</div>										
 			<hr>
 			<div>
