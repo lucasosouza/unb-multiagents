@@ -4,10 +4,7 @@ Esse protótipo foi desenvolvido para atender aos requisitos do T1 da disciplina
 
 Está hospedado em https://unb-multiagents.firebaseapp.com/. 
 
-Código fonte em https://github.com/lucasosouza/unb-multiagents.
-
-# Tecnologia
-
+Código fonte e relatório em markdown disponível em https://github.com/lucasosouza/unb-multiagents.
 
 # Relatório
 
