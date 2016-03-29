@@ -1,0 +1,47 @@
+
+/* custom styling */
+
+.completed {
+	position:absolute;
+	right:150px;
+	top:200px;
+}
+
+.board {
+	height:600px;
+	width:600px;
+	margin: 0 auto;
+}
+
+.box {
+    background-repeat: no-repeat;
+    display: inline-block;
+    text-align: center;
+    vertical-align: center;
+    z-index: 1;
+}
+
+.square {
+	height: 150px;
+	width: 150px;	
+	max-height: 150px;
+	max-width: 150px;	
+	margin: 0px 0px 0px 0px ;
+}
+
+.clean {
+	background-image:url("images/clean-tile.jpg");
+}
+
+.dirty{
+	background-image:url("images/dirty-tile-new.jpg");
+}
+
+.agent {
+	height: 140px;
+	width: 85px;	
+	margin-top: 5px;
+	background-image:url("images/robot.png");
+    background-repeat: no-repeat;
+    margin-left:30px;
+}

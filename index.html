@@ -1,0 +1,41 @@
+<html>
+	<header>
+		<script src="vendors/jquery.min.js"></script>
+		<script src="vendors/angular.min.js"></script>
+		<script src="vendors/bootstrap.min.js"></script>
+		<script src="app.js"></script>
+		<script src="env.js"></script>
+		<script src="agent.js"></script>
+		<link rel="stylesheet" href="vendors/bootstrap.min.css">
+		<link rel="stylesheet" href="style.css">
+		<title>Sistemas Multiagentes</title>
+	</header>
+	<body ng-app="sma">
+		<div class="container" ng-controller="smaCtrl">
+			<h3>MultiAgent Systems</h3>
+			<hr>
+			<div class="form-group form-inline" >
+				<label>Choose the agent type:</label>
+				<select type="text" class="form-control" ng-options="type for type in agentTypes" ng-model="selectedAgent"></select>
+			</div>										
+			<div class="form-group form-inline" >
+				<label>Choose the environment type:</label>
+				<select type="text" class="form-control" ng-options="type for type in boardTypes" ng-model="selectedBoard"></select>
+				<button class="btn btn-primary" ng-click="initialize()" ng-disabled="initialized" style="position:absolute;right:150px">Iniciar</button>
+			</div>										
+			<hr>
+			<div>
+				<h5>Number of Actions: {{ agent.actionsCount  }}</h5>
+				<h5>Number of Cleaned Tiles: {{ agent.cleansCount }}</h5>
+				<h5>Actions/CleanedTiles Ratio: {{ agent.actionsCount / agent.cleansCount | number:2 }}</h5>
+				<h1 ng-if="victory" class="completed">Floor cleaned!!</h1>
+			</div>				
+			<hr>
+			<div class="board">			
+				<div class="box square" ng-repeat="sqr in board.squares" ng-class="sqr.situation">
+					<div class="agent" ng-if="sqr.occupied"></div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>	
